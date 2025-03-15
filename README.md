@@ -80,6 +80,7 @@ For any queries or discussions, feel free to reach out:
 
 📩 Email: [diptaman9999@gmail.com](mailto:diptaman9999@gmail.com)  
 🌍 GitHub: [Diptaman Debnath](https://github.com/diptamandebnath)
+📂 Repo: [Repositories](https://github.com/diptamandebnath/Scientific_Calculator)
 
 ---
 💡 *Happy Coding!* 🚀
