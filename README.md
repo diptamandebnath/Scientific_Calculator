@@ -13,6 +13,10 @@ A fully functional **Scientific Calculator** built using Flutter, designed to pe
 ✅ User-friendly UI with Light/Dark Theme Support
 ✅ Cross-Platform (Android, iOS, Web, and Desktop)
 
+## 📸 Screenshots
+
+![Calculator Screenshot](https://raw.githubusercontent.com/diptamandebnath/Scientific_Calculator/refs/heads/main/Screenshot%202.jfif)  ![Calculator Screenshot](https://raw.githubusercontent.com/diptamandebnath/Scientific_Calculator/refs/heads/main/Screenshot%202.jfif)
+
 ## 🚀 Installation & Setup
 
 To run this project locally, follow these steps:
