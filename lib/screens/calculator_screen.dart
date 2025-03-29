@@ -36,7 +36,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
           break;
         case "Rad":
         case "Deg":
-          isRadMode = !isRadMode;
+          isRadMode = !isRadMode; // Toggle mode
           break;
         case "π":
           _expression += "3.141592653589793";
@@ -76,6 +76,19 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
     try {
       String expression = CalculatorUtils.preprocessFactorials(_expression);
       Parser parser = Parser();
+
+      // Convert expression for rad/deg mode
+      expression = expression.replaceAllMapped(
+        RegExp(r'(sin|cos|tan)\(([^)]+)\)'),
+            (match) {
+          String func = match[1]!;
+          String value = match[2]!;
+          return isRadMode
+              ? "$func($value)"
+              : "$func((${value}) * ${3.141592653589793} / 180)"; // Convert degrees to radians
+        },
+      );
+
       Expression exp = parser.parse(expression
           .replaceAll('×', '*')
           .replaceAll('÷', '/')
@@ -83,8 +96,8 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
           .replaceAll('sqrt', 'sqrt'));
 
       ContextModel contextModel = ContextModel();
-
       double eval = exp.evaluate(EvaluationType.REAL, contextModel);
+
       _lastAnswer = eval.toString();
       _result = eval.toString();
     } catch (e) {
