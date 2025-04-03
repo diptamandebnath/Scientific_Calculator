@@ -41,10 +41,6 @@ To run this project locally:
 
    Choose the desired platform when prompted.
 
-## Screenshot
-
-`![Scientific Calculator Screenshot](asset/screenshot.png)`
-
 ## Dependencies
 
 This project uses the following Flutter packages:
